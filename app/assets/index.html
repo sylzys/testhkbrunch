@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html class="noscroll">
+<head>
+  <!-- Required meta tags-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <!-- <link rel="stylesheet" href="css/app.css"> -->
+  <link rel="stylesheet" href="../app/styles/font-awesome.min.css">
+  <link rel="stylesheet" href="../app/styles/framework7.ios.min.css">
+  <link rel="stylesheet" href="../app/styles/framework7.ios.colors.min.css">
+  <!-- Your app title -->
+  <title>My App</title>
+  <!-- Path to Framework7 iOS CSS theme styles-->
+</head>
+<body>
+  <!-- Status bar overlay for full screen mode (PhoneGap) -->
+  <div class="statusbar-overlay"></div>
+  <!-- Panels overlay-->
+  <div class="panel-overlay"></div>
+  <!-- Left panel with reveal effect-->
+  <div class="panel panel-left panel-reveal">
+    <div class="content-block">
+      <p>Left panel content goes here</p>
+    </div>
+  </div>
+  <!-- Views -->
+  <div class="views tabs toolbar-through">
+    <!-- Your main view, should have "view-main" class -->
+    <div class="view view-main">
+      <!-- Top Navbar-->
+      <nav>
+        <div class="navbar">
+          <div class="navbar-inner">
+            <!-- We need cool sliding animation on title element, so we have additional "sliding" class -->
+            <div class="center sliding">Awesome App</div>
+            <div class="right">
+              <!--
+                Right link contains only icon - additional "icon-only" class
+                Additional "open-panel" class tells app to open panel when we click on this link
+              -->
+              <a href="#" class="link icon-only open-panel"><i class="icon icon-bars"></i></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- Pages container, because we use fixed-through navbar and toolbar, it has additional appropriate classes-->
+      <div class="pages navbar-through toolbar-through">
+        <!-- Page, "data-page" contains page name -->
+        <div data-page="index" class="page">
+          <!-- Scrollable page content -->
+          <div class="page-content">
+            <header>HEADER</header>
+            <div class="wrapper-content" id="flexbox">
+              <div class="wrapper-content-cell">Home</div>
+              <div class="wrapper-content-cell">About</div>
+              <div class="wrapper-content-cell">Products</div>
+              <div class="wrapper-content-cell">Contact</div>
+            </div>
+            <!-- Link to another page -->
+            <footer>
+              <p><a href="about.html" class="button active">Continue</a></p> 
+            </footer>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="toolbar tabbar tabbar-labels">
+      <div class="toolbar-inner">
+        <a href="#tab1" class="tab-link active">
+          <i class="icon demo-icon-1"></i>
+          <span class="tabbar-label">Label 1</span>
+        </a>
+        <a href="#tab2" class="tab-link">
+          <i class="icon demo-icon-2">
+            <span class="badge bg-red">5</span>
+          </i>
+          <span class="tabbar-label">Label 2</span>
+        </a>
+        <a href="#tab3" class="tab-link">
+          <i class="icon demo-icon-3"></i>
+          <span class="tabbar-label">Label 3</span>
+        </a>
+        <a href="#tab4" class="tab-link">
+          <i class="icon demo-icon-4"></i>
+          <span class="tabbar-label">Label 4</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- <script src="cordova.js"></script> -->
+  <script src="js/app.js"></script>
+</body>
+</html>
