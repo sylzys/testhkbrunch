@@ -1,4 +1,4 @@
-require('my-app');
+var myApp = require('my-app');
 
 module.exports = {
 

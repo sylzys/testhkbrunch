@@ -2,16 +2,16 @@
 var myApp = new Framework7({
   init: false //Disable App's automatica initialization
 });
-// We need to use custom DOM library, let's save it to $$ variable:
+// // We need to use custom DOM library, let's save it to $$ variable:
 var $$ = Dom7;
 var appFunc = require('utils/appUtils');
-// Add view
+// // Add view
 var mainView = myApp.addView('.view-main', {
   // Because we want to use dynamic navbar, we need to enable it for this view:
   dynamicNavbar: true
 });
 
-// Now we need to run the code that will be executed only for About page.
+// // Now we need to run the code that will be executed only for About page.
 function setFlexboxHeight(){
   var screenH = document.documentElement.clientHeight;
   var headerH = document.getElementsByTagName('header')[0].clientHeight;
@@ -22,14 +22,17 @@ function setFlexboxHeight(){
   document.getElementById('flexbox').style.height = (heightLeft - 20) + "px";
   // document.getElementsByClassName('pages')[0].style.height = (screenH - navH) + "px";
 }
-// Option 1. Using page callback for page (for "about" page in this case) (recommended way):
-myApp.onPageInit('index', function (page) {
-  // Do something here for "about" page
-  appFunc.hideToolbar();
-  setFlexboxHeight();
-})
+// // Option 1. Using page callback for page (for "about" page in this case) (recommended way):
+// myApp.onPageInit('index', function (page) {
+//   // Do something here for "about" page
+//   appFunc.hideToolbar();
+//   setFlexboxHeight();
+// })
 myApp.onPageInit('about', function (page) {
   // Do something here for "about" page
   myApp.alert('Here comes About page');
 })
 myApp.init();
+alert("init");
+console.log(myApp);
+module.exports = myApp;
