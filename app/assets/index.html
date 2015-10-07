@@ -63,17 +63,30 @@
         </div>
       </div>
     </div>
+    <div id="settingView" class="view tab">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="center sliding i18n" data-i18n="app.name"></div>
+        </div>
+      </div>
+      <div class="pages navbar-through">
+        <div data-page="setting" class="page">
+        </div>
+      </div>
+    </div>
     <div class="toolbar tabbar tabbar-labels">
       <div class="toolbar-inner">
-        <a href="#tab1" class="tab-link active">
-          <i class="icon demo-icon-1"></i>
-          <span class="tabbar-label">Label 1</span>
-        </a>
-        <a href="#tab2" class="tab-link">
-          <i class="icon demo-icon-2">
-            <span class="badge bg-red">5</span>
+        <a href="#settingView" class="tab-link">
+          <i class="icon ios7-gear-outline">
+            <!-- <span class="badge badge-red">4</span> -->
           </i>
-          <span class="tabbar-label">Label 2</span>
+          <span class="tabbar-label i18n" data-i18n="index.setting">plop</span>
+        </a>
+        <a href="#settingView" class="tab-link">
+          <i class="icon ios7-gear-outline">
+            <!-- <span class="badge badge-red">4</span> -->
+          </i>
+          <span class="tabbar-label i18n" data-i18n="index.setting">plop</span>
         </a>
         <a href="#tab3" class="tab-link">
           <i class="icon demo-icon-3"></i>
@@ -86,7 +99,6 @@
       </div>
     </div>
   </div>
-  <!-- <script src="cordova.js"></script> -->
   <script src="js/vendor.js"></script>
   <script src="js/app.js" onload="require('my-app')"></script>
 </body>
