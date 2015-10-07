@@ -4,7 +4,7 @@ var myApp = new Framework7({
 });
 // We need to use custom DOM library, let's save it to $$ variable:
 var $$ = Dom7;
-var appFunc = require('./utils/appFunc.js');
+var appFunc = require('utils/appUtils');
 // Add view
 var mainView = myApp.addView('.view-main', {
   // Because we want to use dynamic navbar, we need to enable it for this view:
